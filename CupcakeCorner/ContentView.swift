@@ -34,9 +34,6 @@ struct ContentView: View {
                         
                     }
                     
-                    
-                    
-                    
                 }
                 
                 Section{
@@ -44,7 +41,7 @@ struct ContentView: View {
                         AddressView(order: order)
                     }
                      
-                    
+                     
                 }
             }
             .navigationTitle("Cupcake Corner")

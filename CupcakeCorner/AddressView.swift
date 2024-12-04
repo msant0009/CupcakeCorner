@@ -10,8 +10,8 @@ import SwiftUI
 struct AddressView: View {
     @Bindable var order: Order
 
-    
     var body: some View {
+    
         Form{
             Section{
                 TextField("Name", text: $order.name)
@@ -25,10 +25,14 @@ struct AddressView: View {
                     CheckoutView(order: order)
                 }
             }
+            .disabled(order.hasValidAddress == false)
         }
         .navigationTitle("Delivery details")
         .navigationBarTitleDisplayMode(.inline)
     }
+       
+    
+
 }
 
 #Preview {
